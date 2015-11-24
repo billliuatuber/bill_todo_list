@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
             String item = data.getExtras().getString("item");
             int pos = data.getExtras().getInt("pos", 0);
             items.set(pos, item);
+            itemsAdapter.notifyDataSetChanged();
             writeItems();
         }
     }
